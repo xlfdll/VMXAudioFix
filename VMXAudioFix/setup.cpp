@@ -53,10 +53,20 @@ BOOL InstallService()
 		return FALSE;
 	}
 
+	if (!StartService(scServiceHandle, 0, NULL))
+	{
+		puts("ERROR: Service is installed but failed to start.");
+
+		CloseServiceHandle(scServiceHandle);
+		CloseServiceHandle(scManagerHandle);
+
+		return FALSE;
+	}
+
 	CloseServiceHandle(scServiceHandle);
 	CloseServiceHandle(scManagerHandle);
 
-	puts("Service has been installed successfully.");
+	puts("Service has been installed and started successfully.");
 
 	return TRUE;
 }
