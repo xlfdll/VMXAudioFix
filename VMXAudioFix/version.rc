@@ -56,8 +56,8 @@ END
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 1,0,Build,0
- PRODUCTVERSION 1,0,Build,0
+ FILEVERSION 1,0,BuildNumber,0
+ PRODUCTVERSION 1,0,BuildNumber,0
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
  FILEFLAGS 0x1L
@@ -75,14 +75,14 @@ BEGIN
             VALUE "Comments", "\0"
             VALUE "CompanyName", "Xlfdll Workstation\0"
             VALUE "FileDescription", "VMware Audio Fix Service\0"
-            VALUE "FileVersion", "1, 0, Build, 0\0"
+            VALUE "FileVersion", "1, 0, " Build ", 0\0"
             VALUE "InternalName", "VMXAudioFix\0"
             VALUE "LegalCopyright", "© 2021 Xlfdll Workstation \0"
             VALUE "LegalTrademarks", "\0"
             VALUE "OriginalFilename", "VMXAudioFix.exe\0"
             VALUE "PrivateBuild", "\0"
             VALUE "ProductName", "VMware Audio Fix Service\0"
-            VALUE "ProductVersion", "1, 0, Build, 0\0"
+            VALUE "ProductVersion", "1, 0, " Build ", 0\0"
             VALUE "SpecialBuild", "\0"
         END
     END

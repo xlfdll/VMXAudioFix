@@ -15,7 +15,8 @@ echo "" >> BuildInfo.h
 echo "#ifndef BUILDINFO_H" >> BuildInfo.h
 echo "#define BUILDINFO_H" >> BuildInfo.h
 echo "" >> BuildInfo.h
-echo "#define Build $build" >> BuildInfo.h
+echo "#define Build \"$build\"" >> BuildInfo.h
+echo "#define BuildNumber $build" >> BuildInfo.h
 echo "#define BuildDate \"$builddate\"" >> BuildInfo.h
 echo "#define BuildTime \"$buildtime\"" >> BuildInfo.h
 echo "#define CommitHash \"$commithash\"" >> BuildInfo.h
