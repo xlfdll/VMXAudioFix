@@ -10,6 +10,8 @@ Already tested on following platforms:
 * Windows 2000 Professional with Service Pack 4 and Update Rollup 1
 * Windows XP Professional with Service Pack 3
 
+Tested on default virtual sound card (ES1371) using both VMware Tools driver and Creative Sound Blaster AudioPCI WDM driver (SBPCI_WebDrvsV5_12_01.exe).
+
 Other VMware products and versions that uses the same hypervisor should also work.
 
 For other Windows 2000/XP guest configurations, the service should work as well (but not guaranteed).
