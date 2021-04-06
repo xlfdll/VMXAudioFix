@@ -63,8 +63,8 @@ VOID WINAPI ServiceMain (DWORD argc, LPTSTR* argv)
 			status);
 	}
 
-	ServiceDebugOutDWORD
-        (TEXT("[VMXAudioFixService] Service is initialized and running.\n"), 0);
+	OutputDebugString
+        (TEXT("[VMXAudioFixService] Service is initialized and running.\n"));
 
 	return;
 }
@@ -78,8 +78,8 @@ VOID WINAPI ServiceCtrlHandler (DWORD opcode)
 	case SERVICE_CONTROL_STOP:
 		ServiceCleanup();
 		
-		ServiceDebugOutDWORD
-			(TEXT("[VMXAudioFixService] Stopping service...\n"), 0);
+		OutputDebugString
+			(TEXT("[VMXAudioFixService] Stopping service...\n"));
 
 		ServiceStatus.dwCurrentState = SERVICE_STOPPED;
 		ServiceStatus.dwWin32ExitCode = 0;
@@ -95,8 +95,8 @@ VOID WINAPI ServiceCtrlHandler (DWORD opcode)
 				status);
 		}
 
-		ServiceDebugOutDWORD
-            (TEXT("[VMXAudioFixService] Service exited.\n"), 0);
+		OutputDebugString
+            (TEXT("[VMXAudioFixService] Service exited.\n"));
 
 		return;
 
@@ -128,8 +128,8 @@ DWORD ServiceInitialization (DWORD argc, LPTSTR* argv, DWORD* specificError)
 
 	if (hResult != S_OK)
 	{
-		ServiceDebugOutDWORD
-			(TEXT("[VMXAudioFixService] InitializeDirectMusicWDM() failed.\n"), 0);
+		OutputDebugString
+			(TEXT("[VMXAudioFixService] InitializeDirectMusicWDM() failed.\n"));
 
         *specificError = hResult;
 

@@ -8,8 +8,8 @@ HRESULT InitializeDirectMusicWDM()
 {
 	if (FAILED(CoInitialize(NULL)))
 	{
-		ServiceDebugOutDWORD
-			(TEXT("[VMXAudioFixService] CoInitialize(NULL) error.\n"), 0);
+		OutputDebugString
+			(TEXT("[VMXAudioFixService] CoInitialize(NULL) error.\n"));
 
 		return E_FAIL;
 	}
@@ -21,8 +21,8 @@ HRESULT InitializeDirectMusicWDM()
 		IID_IDirectMusicPerformance2,
 		(void**)&pDirectMusicPerformance)))
 	{
-		ServiceDebugOutDWORD
-			(TEXT("[VMXAudioFixService] DirectMusic performance object creation failed.\n"), 0);
+		OutputDebugString
+			(TEXT("[VMXAudioFixService] DirectMusic performance object creation failed.\n"));
 
 		pDirectMusicPerformance = NULL;
 
@@ -36,8 +36,8 @@ HRESULT InitializeDirectMusicWDM()
 		NULL,
 		GetDesktopWindow())))
 	{
-		ServiceDebugOutDWORD
-			(TEXT("[VMXAudioFixService] DirectMusic object creation failed.\n"), 0);
+		OutputDebugString
+			(TEXT("[VMXAudioFixService] DirectMusic object creation failed.\n"));
 
 		pDirectMusic = NULL;
 
@@ -46,8 +46,8 @@ HRESULT InitializeDirectMusicWDM()
 
 	if (ScanDirectMusicWDMPort() != S_OK)
 	{
-		ServiceDebugOutDWORD
-			(TEXT("[VMXAudioFixService] DirectMusic port setup failed.\n"), 0);
+		OutputDebugString
+			(TEXT("[VMXAudioFixService] DirectMusic port setup failed.\n"));
 
 		return E_FAIL;
 	}
@@ -167,13 +167,13 @@ HRESULT CreateDirectMusicWDMPort(DMUS_PORTCAPS* pDirectMusicPortCaps)
 
 void ReleaseDirectMusicWDM()
 {
-    ServiceDebugOutDWORD
-        (TEXT("[VMXAudioFixService] Cleaning up DirectMusic components...\n"), 0);
+    OutputDebugString
+        (TEXT("[VMXAudioFixService] Cleaning up DirectMusic components...\n"));
 
 	if (pDirectMusicPerformance)
 	{
-		ServiceDebugOutDWORD
-			(TEXT("[VMXAudioFixService] Cleaning up DirectMusic performance object...\n"), 0);
+		OutputDebugString
+			(TEXT("[VMXAudioFixService] Cleaning up DirectMusic performance object...\n"));
 
 		pDirectMusicPerformance->CloseDown();
 		pDirectMusicPerformance->Release();
@@ -182,8 +182,8 @@ void ReleaseDirectMusicWDM()
 
 	if (pDirectMusicPort)
 	{
-		ServiceDebugOutDWORD
-			(TEXT("[VMXAudioFixService] Cleaning up DirectMusic port...\n"), 0);
+		OutputDebugString
+			(TEXT("[VMXAudioFixService] Cleaning up DirectMusic port...\n"));
 
 		pDirectMusicPort->Release();
 		pDirectMusicPort = NULL;
@@ -191,8 +191,8 @@ void ReleaseDirectMusicWDM()
 
 	if (pDirectMusic)
 	{
-		ServiceDebugOutDWORD
-			(TEXT("[VMXAudioFixService] Cleaning up DirectMusic object...\n"), 0);
+		OutputDebugString
+			(TEXT("[VMXAudioFixService] Cleaning up DirectMusic object...\n"));
 
 		pDirectMusic->Release();
 		pDirectMusic = NULL;

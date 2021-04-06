@@ -58,8 +58,8 @@ int main(int argc, char* argv[])
 		// Otherwise access violation error will occur
 		CoInitialize(NULL);
 
-        ServiceDebugOutDWORD
-            (TEXT("[VMXAudioFixService] Starting...\n"), 0);
+        OutputDebugString
+            (TEXT("[VMXAudioFixService] Starting...\n"));
 
 		SERVICE_TABLE_ENTRY dispatchTable[] = 
 		{
