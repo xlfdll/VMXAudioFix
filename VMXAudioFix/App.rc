@@ -92,14 +92,14 @@ END
 
 IDD_ABOUT DIALOG DISCARDABLE  0, 0, 187, 134
 STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
-CAPTION "About VMware Audio Fix Utility"
+CAPTION "About"
 FONT 8, "MS Sans Serif"
 BEGIN
     DEFPUSHBUTTON   "OK",IDOK,68,113,50,14
-    CTEXT           "VMware Audio Fix Utility",IDC_APP_TITLE,55,48,76,8,
+    CTEXT           "VMware Audio Fix Service",IDC_APP_TITLE,7,48,173,8,
                     SS_CENTERIMAGE
     CTEXT           "Version %s",IDC_APP_VERSION,7,63,173,8,SS_CENTERIMAGE
-    CTEXT           "© 2021 Xlfdll Workstation ",IDC_APP_COPYRIGHT,51,78,84,
+    CTEXT           "© 2021 Xlfdll Workstation ",IDC_APP_COPYRIGHT,7,78,173,
                     8,SS_CENTERIMAGE
     ICON            IDI_APP_ICON,IDC_APP_ICON,83,16,20,20,SS_REALSIZEIMAGE
     CTEXT           "Using %s port",IDC_PORT_STATUS,7,94,173,8,
