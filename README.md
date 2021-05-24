@@ -18,10 +18,7 @@ For other Windows 2000/XP guest configurations, the service should work as well 
 
 ## Usage
 1. Download VMXAudioFix.exe and place it into a stable location
-2. Click **Start** button, open **Programs -- Accessories -- Command Prompt**
-3. Type `"<Path to VMXAudioFix.exe>" /install` to install and start the service. Quotes are needed if the path contains spaces.
-
-If the service is no longer needed, repeat step 1 and 2, and type `"<Path to VMXAudioFix.exe>" /uninstall` to uninstall.
+2. Run it. An icon will show up in notification area of the taskbar
 
 ## Development Prerequisites
 To avoid introducing external dependencies (including redistributables), the following development platforms and tools are used:
@@ -33,6 +30,3 @@ To avoid introducing external dependencies (including redistributables), the fol
 Newer versions of the above could also be used with some modifications.
 
 Before the build, generate-build-number.sh needs to be executed in a Git / Bash shell to generate build information code file (BuildInfo.h).
-
-## Known Issues
-* When the service is running, other programs are not able to use DirectMusic. An empty DirectMusic port list will be shown in DirectX Diagnostics tool (DxDiag.exe).

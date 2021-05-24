@@ -6,9 +6,10 @@
 #include <dmusicc.h>
 #include <dmusici.h>
 
-#include "helper.h"
+#include "Globals.h"
+#include "Diags.h"
 
-HRESULT InitializeDirectMusicWDM();
+HRESULT InitializeDirectMusicWDM(HWND hwnd);
 HRESULT ScanDirectMusicWDMPort();
 HRESULT CreateDirectMusicWDMPort(DMUS_PORTCAPS* pDirectMusicPortCaps);
 void ReleaseDirectMusicWDM();

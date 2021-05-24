@@ -1,0 +1,42 @@
+// VERSIONINFO resource script
+// Included by app resource script on compile-time
+
+#include "BuildInfo.h"
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 2,0,BuildNumber,0
+ PRODUCTVERSION 2,0,BuildNumber,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "Xlfdll Workstation\0"
+            VALUE "FileDescription", "VMware Audio Fix Utility\0"
+            VALUE "FileVersion", "2.0." Build ".0\0"
+            VALUE "InternalName", "VMXAudioFix\0"
+            VALUE "LegalCopyright", "© 2021 Xlfdll Workstation \0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "VMXAudioFix.exe\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "VMware Audio Fix Utility\0"
+            VALUE "ProductVersion", "2.0." Build ".0\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
